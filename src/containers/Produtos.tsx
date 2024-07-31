@@ -5,15 +5,14 @@ import * as S from './styles'
 
 type Props = {
   jogos: Game[]
-  adicionarAoCarrinho: (jogo: Game) => void
 }
 
-const Produtos = ({ jogos, adicionarAoCarrinho }: Props) => {
+const Produtos = ({ jogos }: Props) => {
   return (
     <>
       <S.Produtos>
         {jogos.map((game) => (
-          <Produto key={game.id} game={game} aoComprar={adicionarAoCarrinho} />
+          <Produto key={game.id} game={game} />
         ))}
       </S.Produtos>
     </>
